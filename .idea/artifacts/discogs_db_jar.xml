@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="discogs-db:jar">
+    <output-path>$PROJECT_DIR$</output-path>
+    <root id="archive" name="discogs-db.jar">
+      <element id="module-output" name="discogs-db" />
+      <element id="library" level="project" name="sqlite-jdbc-3.36.0.3" />
+    </root>
+  </artifact>
+</component>
