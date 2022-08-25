@@ -23,7 +23,6 @@ public class discogs {
     System.out.println("  java discogs.jar musicians key => generates key-musicians.json");
     System.out.println("  java discogs.jar tracks key => generates key-tracks.json");
 
-
     switch (args[0]) {
       case "discogs":
         genDiscogs();
@@ -44,6 +43,7 @@ public class discogs {
       default:
         System.out.println(args[0]);
     }
+    
   }
 
   /*
