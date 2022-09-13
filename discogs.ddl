@@ -11,7 +11,8 @@ create table discogs(
   name text not null,           -- display name
   img text not null,            -- url of image for the band or musician
   alt text not null,            -- alternate text for the image
-  wiki text not null            -- url of wiki article of band or musician
+  wiki text not null,           -- url of wiki article of band or musician
+  active int not null           -- flag -1 = not in discogs.json, 0 = coming soon, 1 = ready
 );
 
 /*
@@ -44,7 +45,7 @@ create table albums (
 create table tracks (
   key text,                     -- reference to discog
   aid int,                      -- id of album within discog
-  tno int,                      -- track number
+  tno int,                      -- track number, should be a sequence 1..n
   title text not null,          -- title of track
   length text not null,         -- length of track
   primary key (key, aid, tno),
@@ -59,7 +60,7 @@ create table musicians (
   mid int primary key,          -- unique id of musician, used for sorting on album card
   name text not null unique,    -- unique name of musician
   info text not null,           -- short characteristics of the musician 
-  img text,                     -- url image of musician
+  img text,                     -- url image of musician or link to avatar 
   alt text,                     -- alternate text for the image
   wiki text,                    -- url of wiki article of musician
   bdate date,
