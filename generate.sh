@@ -4,7 +4,7 @@
 # © 2022 by Burkhardt Renz, THM, no rights reserved
 #
 
-keys=('cream')
+keys=('cream' 'jimi')
 
 # function pretty printing json
 function pretty-print {
@@ -16,6 +16,7 @@ function pretty-print {
 # discogs.json
 mkdir json
 java -jar discogs-db.jar discogs
+pretty-print discogs.json;
 mv discogs.json json 
 
 # jsons for the key
