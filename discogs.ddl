@@ -12,7 +12,7 @@ create table discogs(
   img text not null,            -- url of image for the band or musician
   alt text not null,            -- alternate text for the image
   wiki text not null,           -- url of wiki article of band or musician
-  active int not null           -- flag -1 = not in discogs.json, 0 = coming soon, 1 = ready
+  active int not null           -- flag -1 = not in thm.spg.discogs.json, 0 = coming soon, 1 = ready
 );
 
 /*
@@ -32,7 +32,7 @@ create table albums (
   recorded text,                -- date and studio of recording
   producer text,                -- producer
   venue text,                   -- venue in case of live recording
-  length decimal(6,2),          -- length
+  length text not null,         -- length
   primary key (key, aid),       -- aid is unique per key
   unique (key, title)           -- title is unique per key
 );
@@ -54,17 +54,17 @@ create table tracks (
 
 /*
  Table musicians
- Global table, the same musician can appear in different discogs
+ Global table, the same musician can appear in different thm.spg.discogs
  */
 create table musicians (
   mid int primary key,          -- unique id of musician, used for sorting on album card
   name text not null unique,    -- unique name of musician
   info text not null,           -- short characteristics of the musician 
-  img text,                     -- url image of musician or link to avatar 
-  alt text,                     -- alternate text for the image
+  img text not null,            -- url image of musician or link to avatar 
+  alt text not null,            -- alternate text for the image
   wiki text,                    -- url of wiki article of musician
-  bdate date,
-  ddate date
+  bdate text,                   -- date of birth in iso format
+  ddate text                    -- date of death in iso format
 );
 
 /* 
