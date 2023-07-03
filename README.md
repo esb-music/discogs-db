@@ -14,6 +14,7 @@ to provide the data for [esb-music.github.io](https://esb-music.github.io).
 The schema of the SQLite database is defined in 
 <a href="discogs.ddl" target="_blank">discogs.ddl</a> and visualized 
 in the following data structure diagram:
+
 ![data struture diagram of the database](discogs-schema.svg)
 
 ## How to use _discogs-db_
