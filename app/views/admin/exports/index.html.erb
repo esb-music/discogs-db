@@ -1,0 +1,22 @@
+<div class="p-4">
+  <header class="mt-4 ms-4 mb-5">
+    <h4>Export JSON files for discogs-app</h4>
+  </header>
+
+  <form class="row g-3 ms-4">
+    <div class="col-auto">
+      <label for="staticText" class="visually-hidden">Label</label>
+      <input type="text" readonly class="form-control-plaintext" id="staticText" value="Choose discog to export">
+    </div>
+    <div class="col-auto">
+      <label for="selectDiscog" class="visually-hidden">Discog</label>
+      <%= select_tag 'discog', options_for_select(Discog.all.collect{ |d| [d.name, d.key] }),
+                     class: 'form_select mt-2 me-5' %>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary ms-5 mb-3">Export!</button>
+    </div>
+    <p class="mt-4">The JSON files are exported to folder <code>discogs-app-data</code> </p>
+  </form>
+
+</div>

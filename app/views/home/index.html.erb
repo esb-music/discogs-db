@@ -1,0 +1,21 @@
+<div class="container fluid">
+  <div class="card mx-auto mt-5" style="width: 40rem;">
+    <%= image_tag("home.png") %>
+    <div class="card-body">
+      <h4 class="card-title">discogs-db</h4>
+      <p class="card-text text-body-secondary">This is discogs-db Rev. 2.0</p>
+      <p class="card-text"><em>discogs-db</em> is a tool for editing an SQLite database with information about
+        discographies and generating and validating JSON files used by
+        <a href="https://github.com/esb-music/discogs-app">discogs-app</a> to provide the data for
+        the web site <a href="https://esb-music.github.io">esb-music-io</a>.</p>
+      <p class="card-text">The project is developed with <a href="https://rubyonrails.org">Ruby on Rails</a>
+        and hosted on <a href="https://github.com/esb-music/discogs-db">GitHub</a>.
+        discogs-db can be used under
+        the <a href="https://opensource.org/license/mit/">MIT license</a>.
+      </p>
+      <div class="text-center">
+        <%= link_to("Let's get started!", admin_root_url, class: "btn btn-primary") %>
+      </div>
+    </div>
+  </div>
+</div>
