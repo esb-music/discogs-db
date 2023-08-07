@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "default": [],
+  "title": "Schema of infos about musicians",
+  "items": {
+    "type": "object",
+    "title": "musician",
+    "required": [
+      "mid",
+      "name",
+      "info",
+      "img",
+      "alt",
+      "wiki",
+      "bdate",
+      "ddate"
+    ],
+    "properties": {
+      "mid": {
+        "type": "integer",
+        "title": "The musician's id mid"
+      },
+      "name": {
+        "type": "string",
+        "title": "The musician's name",
+        "examples": [
+          "Jimi Hendrix",
+          "Noel Redding"
+        ]
+      },
+      "info": {
+        "type": "string",
+        "title": "Info about the musician",
+        "examples": [
+          "The most influential electic guitarist of all time",
+          "Bass player for the Jimi Hendrix Experience"
+        ]
+      },
+      "img": {
+        "type": "string",
+        "title": "Url of an img of the musician or the filename in avatars",
+        "examples": [
+          "https://upload.wikimedia.org/wikipedia/commons/4/43/Jimi_Hendrix_1968.jpg",
+          "/avatars/Freddie_Smith.png"
+        ]
+      },
+      "alt": {
+        "type": "string",
+        "title": "Alternate text fpr the image",
+        "examples": [
+          "Jimi Hendrix 1968",
+          "Noel Redding 1967"
+        ]
+      },
+      "wiki": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Url for the wikipedia article on the musician",
+        "examples": [
+          "https://en.wikipedia.org/wiki/Jimi_Hendrix",
+          "https://en.wikipedia.org/wiki/Noel_Redding"
+        ]
+      },
+      "bdate": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Birthdate in iso format",
+        "examples": [
+          "1942_11-27",
+          "1945-12-25"
+        ]
+      },
+      "ddate": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "Death date in iso format",
+        "examples": [
+          "1970-09-18",
+          "2003-05-11"
+        ]
+      }
+    }
+  },
+  "examples": [
+    [
+      {
+        "mid": 200,
+        "name": "Jimi Hendrix",
+        "info": "The most influential electic guitarist of all time",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/4/43/Jimi_Hendrix_1968.jpg",
+        "alt": "Jimi Hendrix 1968",
+        "wiki": "https://en.wikipedia.org/wiki/Jimi_Hendrix",
+        "bdate": "1942_11-27",
+        "ddate": "1970-09-18"
+      },
+      {
+        "mid": 201,
+        "albumcnt": 4,
+        "name": "Noel Redding",
+        "info": "Bass player for the Jimi Hendrix Experience",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/6/62/Noel_Redding.png",
+        "alt": "Noel Redding 1967",
+        "wiki": "https://en.wikipedia.org/wiki/Noel_Redding",
+        "bdate": "1945-12-25",
+        "ddate": "2003-05-11"
+      }
+    ]
+  ]
+}

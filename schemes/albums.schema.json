@@ -1,0 +1,278 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "default": [],
+  "title": "Schema of the descriptions of albums",
+  "items": {
+    "type": "object",
+    "title": "Description of an album",
+    "required": [
+      "key",
+      "aid",
+      "title",
+      "subtitle",
+      "img",
+      "alt",
+      "label",
+      "released",
+      "length",
+      "musicians"
+    ],
+    "properties": {
+      "key": {
+        "type": "string",
+        "title": "The key that identifies the discography",
+        "examples": [
+          "jimi"
+        ]
+      },
+      "aid": {
+        "type": "integer",
+        "title": "The id of the album, unique per key, should be a sequence"
+      },
+      "title": {
+        "type": "string",
+        "title": "The title of the album",
+        "examples": [
+          "Are You Experienced",
+          "Electric Ladyland"
+        ]
+      },
+      "subtitle": {
+        "type": "string",
+        "title": "The subtitle of the album",
+        "examples": [
+          "Debut studio album by the Jimi Hendrix Experience",
+          "Third and final studio album by the Jimi Hendrix Experience"
+        ]
+      },
+      "img": {
+        "type": "string",
+        "title": "The url of the cover of the album",
+        "examples": [
+          "https://upload.wikimedia.org/wikipedia/en/8/85/Axiscover.jpg",
+          "https://upload.wikimedia.org/wikipedia/en/f/f2/Jimi_Hendrix_-_Electric_Ladyland.jpg"
+        ]
+      },
+      "alt": {
+        "type": "string",
+        "title": "Alternate text for img",
+        "examples": [
+          "Cover of Are You Experienced",
+          "Cover of Electric Ladyland"
+        ]
+      },
+      "wiki": {
+        "type": "string",
+        "title": "Url of the wikipedia article on the album",
+        "examples": [
+          "https://en.wikipedia.org/wiki/Are_You_Experienced",
+          "https://en.wikipedia.org/wiki/Electric_Ladyland"
+        ]
+      },
+      "label": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "title": "The label of the album",
+        "examples": [
+          "Track",
+          "Capitol"
+        ]
+      },
+      "released": {
+        "type": "string",
+        "title": "The release date of the album in iso format",
+        "examples": [
+          "1967-05-12",
+          "1968-10-16"
+        ]
+      },
+      "recorded": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "title": "The recording date",
+        "examples": [
+          "October 23, 1966 – April 4, 1967",
+          "July \u0026 December 1967 and\nJanuary \u0026 April–August 1968"
+        ]
+      },
+      "producer": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "title": "The producer of the album",
+        "examples": [
+          "Chas Chandler",
+          "Lou Adler,  John Phillips"
+        ]
+      },
+      "venue": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "title": "The venue in case of a live album",
+        "examples": [
+          null,
+          "Fillmore East, New York City"
+        ]
+      },
+      "length": {
+        "type": "string",
+        "title": "The length of the recordings on the album",
+        "examples": [
+          "38:34",
+          "73:56"
+        ]
+      },
+      "musicians": {
+        "type": "array",
+        "title": "The musicians playing on the album",
+        "items": {
+          "type": "object",
+          "title": "A musician",
+          "required": [
+            "mid",
+            "name"
+          ],
+          "properties": {
+            "mid": {
+              "type": "integer",
+              "title": "The musician's id mid",
+              "examples": [
+                200,
+                201
+              ]
+            },
+            "name": {
+              "type": "string",
+              "title": "The musician's name",
+              "examples": [
+                "Jimi Hendrix",
+                "Noel Redding"
+              ]
+            }
+          },
+          "examples": [
+            {
+              "mid": 200,
+              "name": "Jimi Hendrix"
+            },
+            {
+              "mid": 201,
+              "name": "Noel Redding"
+            }
+          ]
+        }
+      }
+    },
+    "examples": [
+      [
+        {
+          "key": "jimi",
+          "aid": 1,
+          "title": "Are You Experienced",
+          "subtitle": "Debut studio album by the Jimi Hendrix Experience",
+          "img": "https://upload.wikimedia.org/wikipedia/en/1/17/AreyouexpUK.jpg",
+          "alt": "Cover of Are You Experienced",
+          "wiki": "https://en.wikipedia.org/wiki/Are_You_Experienced",
+          "label": "Track",
+          "released": "1967-05-12",
+          "recorded": "October 23, 1966 – April 4, 1967",
+          "producer": "Chas Chandler",
+          "venue": null,
+          "length": "38:34",
+          "musicians": [
+            {
+              "mid": 200,
+              "name": "Jimi Hendrix"
+            },
+            {
+              "mid": 201,
+              "name": "Noel Redding"
+            },
+            {
+              "mid": 202,
+              "name": "Mitch Mitchell"
+            },
+            {
+              "mid": 205,
+              "name": "Chas Chandler"
+            }
+          ]
+        },
+        {
+          "key": "jimi",
+          "aid": 3,
+          "title": "Electric Ladyland",
+          "subtitle": "Third and final studio album by the Jimi Hendrix Experience",
+          "img": "https://upload.wikimedia.org/wikipedia/en/f/f2/Jimi_Hendrix_-_Electric_Ladyland.jpg",
+          "alt": "Cover of Electric Ladyland",
+          "wiki": "https://en.wikipedia.org/wiki/Electric_Ladyland",
+          "label": "Reprise",
+          "released": "1968-10-16",
+          "recorded": "July \u0026 December 1967 and\nJanuary \u0026 April–August 1968",
+          "producer": "Jimi Hendirx",
+          "venue": null,
+          "length": "73:56",
+          "musicians": [
+            {
+              "mid": 200,
+              "name": "Jimi Hendrix"
+            },
+            {
+              "mid": 201,
+              "name": "Noel Redding"
+            },
+            {
+              "mid": 202,
+              "name": "Mitch Mitchell"
+            },
+            {
+              "mid": 204,
+              "name": "Buddy Miles"
+            },
+            {
+              "mid": 206,
+              "name": "Dave Mason"
+            },
+            {
+              "mid": 207,
+              "name": "Jack Casady"
+            },
+            {
+              "mid": 208,
+              "name": "Steve Winwood"
+            },
+            {
+              "mid": 209,
+              "name": "Al Kooper"
+            },
+            {
+              "mid": 210,
+              "name": "Freddie Smith"
+            },
+            {
+              "mid": 211,
+              "name": "Larry Faucette"
+            },
+            {
+              "mid": 212,
+              "name": "Mike Finnigan"
+            },
+            {
+              "mid": 214,
+              "name": "Brian Jones"
+            }
+          ]
+        }
+      ]
+    ]
+  }
+}  
