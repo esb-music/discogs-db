@@ -27,5 +27,5 @@ Load the project into RubyMine, start the built-in webserver via the command
    albums, the table 'tracks' the tracks on the albums. The table
    'performings' connects the musicians with the tracks they play on.
 2. The JSON files for _discogs-app_ can be generated in the exports page 
-   the app.
+   of the app.
 
