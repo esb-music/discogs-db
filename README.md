@@ -18,7 +18,7 @@ visualized in the following data structure diagram:
 ## How to use _discogs-db_
 
 _discogs_db_ is a Ruby on Rails app. The simplest way to start the app:
-Load the project into RubyMine, start the built-in webserver via the command
+Open a terminal in the project folder, start the built-in webserver Puma via the command
 'rails s' and start the browser with the URL shown in the terminal.
 
 1. Populate the database with information of the albums of a
