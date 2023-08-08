@@ -1,2 +1,6 @@
 /json/
 /target/
+.idea/
+/log/
+/tmp/
+/discogs-app-data/
