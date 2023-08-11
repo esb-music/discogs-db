@@ -12,7 +12,7 @@ class CreateAlbums < ActiveRecord::Migration[7.0]
       t.string :recorded
       t.string :producer
       t.string :venue
-      t.decimal :length, precision: 6, scale: 2
+      t.string :length
 
       t.timestamps
     end

@@ -13,7 +13,7 @@ class AlbumDashboard < Administrate::BaseDashboard
     discog: Field::BelongsTo,
     img: Field::String,
     label: Field::String,
-    length: Field::String.with_options(searchable: false),
+    length: Field::String,
     producer: Field::String,
     recorded: Field::String,
     released: Field::String,
