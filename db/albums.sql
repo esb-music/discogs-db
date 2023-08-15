@@ -3,7 +3,7 @@
 --
 -- https://tableplus.com/
 --
--- Database: development.sqlite3
+-- Database: discogs.sqlite3
 -- Generation Time: 2023-07-26 16:17:07.6220
 -- -------------------------------------------------------------
 

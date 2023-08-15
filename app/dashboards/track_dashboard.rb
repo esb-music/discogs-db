@@ -11,7 +11,7 @@ class TrackDashboard < Administrate::BaseDashboard
     id: Field::Number,
     album: Field::BelongsTo,
     discog: Field::BelongsTo,
-    length: Field::String.with_options(searchable: false),
+    length: Field::String,
     musicians: Field::HasMany,
     performings: Field::HasMany,
     title: Field::String,

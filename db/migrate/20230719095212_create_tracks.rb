@@ -5,7 +5,7 @@ class CreateTracks < ActiveRecord::Migration[7.0]
       t.belongs_to :album, null: false, foreign_key: true
       t.integer :tno, null: false
       t.string  :title, null: false
-      t.decimal :length, precision: 6, scale: 2
+      t.string :length
 
       t.timestamps
     end
