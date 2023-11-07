@@ -30,6 +30,7 @@ class TrackDashboard < Administrate::BaseDashboard
     album
     tno
     title
+    length
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
