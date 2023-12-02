@@ -24,6 +24,7 @@ class AlbumDashboard < Administrate::BaseDashboard
     wiki: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    comment: Field::Text
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -75,6 +76,7 @@ class AlbumDashboard < Administrate::BaseDashboard
     recorded
     released
     venue
+    comment
     tracks
   ].freeze
 

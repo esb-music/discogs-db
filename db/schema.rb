@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_05_090136) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_02_130756) do
   create_table "albums", force: :cascade do |t|
     t.integer "discog_id", null: false
     t.string "title", null: false
@@ -23,9 +23,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_05_090136) do
     t.string "recorded"
     t.string "producer"
     t.string "venue"
-    t.decimal "length", precision: 6, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "length"
+    t.string "comment"
     t.index ["discog_id"], name: "index_albums_on_discog_id"
   end
 
@@ -69,9 +70,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_05_090136) do
     t.integer "album_id", null: false
     t.integer "tno", null: false
     t.string "title", null: false
-    t.decimal "length", precision: 6, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "length"
     t.index ["album_id"], name: "index_tracks_on_album_id"
     t.index ["discog_id"], name: "index_tracks_on_discog_id"
   end
