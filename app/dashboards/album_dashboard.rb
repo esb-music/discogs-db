@@ -21,7 +21,7 @@ class AlbumDashboard < Administrate::BaseDashboard
     title: Field::String,
     tracks: Field::HasMany,
     venue: Field::String,
-    wiki: Field::String,
+    wiki: Field::Url,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     comment: Field::Text
