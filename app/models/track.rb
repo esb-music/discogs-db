@@ -37,5 +37,18 @@ select tracks from a;
       f.write(tracks.to_json)
     end
   end
+
+  def self.get_pairings(musician1, musician2)
+    query = <<-SQL
+select tracks.* from tracks join performings on performings.track_id = tracks.id 
+    where performings.musician_id = ?
+intersect
+select tracks.* from tracks join performings on performings.track_id = tracks.id 
+    where performings.musician_id = ?
+order by tracks.album_id, tracks.tno
+    SQL
+    tracks = Track.execute_sql(query, musician1, musician2).map{ |t| Track.new(t) }
+    return tracks
+  end
 end
 

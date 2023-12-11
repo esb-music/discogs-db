@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :tracks
       resources :musicians
       resources :performings
+      resources :pairings
       resources :exports
 
       root to: "discogs#index"

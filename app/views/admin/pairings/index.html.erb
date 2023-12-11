@@ -1,0 +1,24 @@
+<div class="p-4">
+  <header class="mt-4 ms-4 mb-5">
+    <h4>Show tracks performed together by two musicians</h4>
+  </header>
+
+  <form class="row g-3 ms-4">
+    <div class="col-auto">
+      <label for="staticText" class="visually-hidden">Label</label>
+      <input type="text" readonly class="form-control-plaintext" id="staticText" value="Choose two musicians">
+    </div>
+    <div class="col-auto">
+      <label for="selectMusician1" class="visually-hidden">Musician 1</label>
+      <%= select_tag 'musician1', options_for_select(Musician.all.collect{ |m| [m.name, m.id] }),
+                     class: 'form_select mt-2 me-5' %>
+      <label for="selectMusician2" class="visually-hidden">Musician 2</label>
+      <%= select_tag 'musician2', options_for_select(Musician.all.collect{ |m| [m.name, m.id] }),
+                     class: 'form_select mt-2 me-5' %>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary ms-5 mb-3">Retrieve Pairings</button>
+    </div>
+  </form>
+
+</div>

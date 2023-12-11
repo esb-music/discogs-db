@@ -1,0 +1,36 @@
+<div class="p-4">
+  <header class="mt-4 ms-4 mb-5">
+    <h4>Pairing of musicians</h4>
+  </header>
+
+  <p class="ms-4"><i><%= @musician1 %></i> and <i><%= @musician2 %></i> are performing together on:</p>
+
+  <% if !@tracks.empty? %>
+    <table>
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Album</th>
+        <th>TrackNo</th>
+        <th>Title</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @tracks.each do |track| %>
+        <tr>
+          <td><%= track.id %></td>
+          <td><%= track.album.title %></td>
+          <td><%= track.tno %></td>
+          <td><%= track.title %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p class="ms-4">No results to display</p>
+  <% end %>
+
+  <div class="ms-4">
+    <%= button_to "Next", action: "index"%>
+  </div>
+</div>
