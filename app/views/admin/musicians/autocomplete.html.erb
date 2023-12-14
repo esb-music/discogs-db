@@ -1,0 +1,3 @@
+<% @musicians.each do |musician| %>
+  <li class="list-group-item" role="option" data-autocomplete-value="<%= musician.id %>"><%= musician.name %></li>
+<% end %>

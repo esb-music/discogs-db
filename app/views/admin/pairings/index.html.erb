@@ -9,15 +9,25 @@
       <input type="text" readonly class="form-control-plaintext" id="staticText" value="Choose two musicians">
     </div>
     <div class="col-auto">
-      <label for="selectMusician1" class="visually-hidden">Musician 1</label>
-      <%= select_tag 'musician1', options_for_select(Musician.all.collect{ |m| [m.name, m.id] }),
-                     class: 'form_select mt-2 me-5' %>
-      <label for="selectMusician2" class="visually-hidden">Musician 2</label>
-      <%= select_tag 'musician2', options_for_select(Musician.all.collect{ |m| [m.name, m.id] }),
-                     class: 'form_select mt-2 me-5' %>
-    </div>
-    <div class="col-auto">
-      <button type="submit" class="btn btn-primary ms-5 mb-3">Retrieve Pairings</button>
+      <div class="mb-4" +
+           data-controller="autocomplete"
+           data-autocomplete-min-length-value="3"
+           data-autocomplete-url-value="/admin/musicians/autocomplete" role="combobox">
+        <input type="text" data-autocomplete-target="input" required/>
+        <input type="hidden" name="musician1" data-autocomplete-target="hidden"/>
+        <ul class="list-group" data-autocomplete-target="results"></ul>
+      </div>
+      <div class="mb-4"
+           data-controller="autocomplete"
+           data-autocomplete-min-length-value="3"
+           data-autocomplete-url-value="/admin/musicians/autocomplete" role="combobox">
+        <input type="text" data-autocomplete-target="input" required/>
+        <input type="hidden" name="musician2" data-autocomplete-target="hidden"/>
+        <ul class="list-group" data-autocomplete-target="results"></ul>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary ms-5 mb-3">Retrieve Pairings</button>
+      </div>
     </div>
   </form>
 </div>

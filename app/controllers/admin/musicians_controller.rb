@@ -42,6 +42,11 @@ module Admin
 
     # See https://administrate-demo.herokuapp.com/customizing_controller_actions
     # for more information
+
+    def autocomplete
+      @musicians = Musician.where('name like?', "%#{params[:q]}%").order(name: :asc)
+      render layout: false
+    end
     private
 
     def scoped_resource

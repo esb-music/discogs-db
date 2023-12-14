@@ -3,7 +3,11 @@ Rails.application.routes.draw do
       resources :discogs
       resources :albums
       resources :tracks
-      resources :musicians
+      resources :musicians do
+        collection do
+          get :autocomplete
+        end
+      end
       resources :performings
       resources :pairings
       resources :exports
