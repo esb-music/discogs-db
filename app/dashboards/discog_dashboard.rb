@@ -13,7 +13,7 @@ class DiscogDashboard < Administrate::BaseDashboard
     name: Field::String,
     img: Field::String,
     alt: Field::String,
-    wiki: Field::String,
+    wiki: Field::Url,
     active: Field::Number,
     albums: Field::HasMany,
     created_at: Field::DateTime,

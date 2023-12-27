@@ -17,7 +17,7 @@ class MusicianDashboard < Administrate::BaseDashboard
     name: Field::String,
     performings: Field::HasMany,
     tracks: Field::HasMany,
-    wiki: Field::String,
+    wiki: Field::Url,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze

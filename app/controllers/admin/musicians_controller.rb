@@ -44,9 +44,10 @@ module Admin
     # for more information
 
     def autocomplete
-      @musicians = Musician.where('name like?', "%#{params[:q]}%").order(name: :asc)
+      @musicians = Musician.where('name like ?', "%#{params[:q]}%").order(name: :asc)
       render layout: false
     end
+
     private
 
     def scoped_resource
