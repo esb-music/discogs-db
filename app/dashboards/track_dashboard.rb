@@ -53,8 +53,8 @@ class TrackDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     discog
     album
-    title
     tno
+    title
     length
     performings
   ].freeze
